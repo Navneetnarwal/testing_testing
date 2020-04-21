@@ -19,8 +19,22 @@
  */
 stuLL_t* createNodeLinkedList(void)
 {
-	// PROBLEM #1: complete the code for this function
-	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+// PROBLEM 1: solution
+	//dynamic memory allocation in heap using malloc function for the student reccord
+stull_t* pHEAD= (stull_t*)malloc(sizeof(stull_t));
+if (pHEAD!= NULL)NEXT=NULL;
+{   
+      //  new data is assigned to the node 
+   pHEAD->data.fname= stdata.fname;
+   pHEAD->data.fname= stdata.gname;
+   pHEAD->data.fname= stdata.grade;
+     // here the new pointer is initialised to the node
+  pHEAD->p
+}
+    //  the updated value of student record is returned
+ return pHEAD;
+}
+	
 }
 
 /*
@@ -92,11 +106,15 @@ stuLL_t* findLinkedList(stuLL_t *pHEAD, char *targetFamilyName)
 		// list is not empty, begin search
 		while ((pW != NULL) && (strcmp(pW->data.fName, targetFamilyName)))
 		{
-			// PROBLEM #2: complete the code for this function
-			//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
-		}
+			// PROBLEM #2:solution
+                        //jumping to the next node 
+
+	      pW = pW_>pNext;
+     }
 		printf("\n");
-	}
+			
+		}
+	
 	return pW;
 }
 
