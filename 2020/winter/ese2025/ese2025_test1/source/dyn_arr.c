@@ -21,9 +21,7 @@
  */
 int comparo_fName(const void *pA, const void *pB)
 {
-	// PROBLEM #3: solution
-
-
+	   // PROBLEM #3: solution
 	   // student record is extracted
    stuDA_t student_A = *((stuDA_t*) pA);
    stuDA_t student_B = *((stuDA_t*) pA);
@@ -31,7 +29,7 @@ int comparo_fName(const void *pA, const void *pB)
    char *fName_A = student_A.data.fName;
    char *fName_B = student_B.data.fName;
           //returning the string strcmp function using data(fName_A and fName_B)
-return strcmp(fName_A, fName_B);
+       return strcmp(fName_A, fName_B);
 	
 	  
 	
@@ -66,7 +64,7 @@ int comparo_grade(const void *pA, const void *pB)
 	//extracting student record
         stuDA_t student_A = *((stuDA_t*) pA);
 	stuDA_t student_B = *((stuDA_t*) pB);
-        //getting student grade for comparision purpose
+        //getting  the student grade for comparision purpose
      float *garde_A = student_A.data.grade;
      float *garde_B = student_B.data.grade;
   //  returning the string by Strcmp function using (grade_A and grade_B) data
