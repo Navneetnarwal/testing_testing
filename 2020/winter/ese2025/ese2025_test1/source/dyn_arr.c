@@ -25,7 +25,7 @@ int comparo_fName(const void *pA, const void *pB)
 	
 	   // student record is extracted
    stuDA_t student_A = *((stuDA_t*) pA);
-   stuDA_t student_B = *((stuDA_t*) pA);
+   stuDA_t student_B = *((stuDA_t*) pB);
 	
            //getting student family name
    char *fName_A = student_A.data.fName;
@@ -110,17 +110,17 @@ stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 	switch (sort_type)
 	{
 	case fNamesort:
-               // student record is sorted by family name
+                // student record is sorted by family name
 			
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
 		break;
 	case gNamesort:
-               // student record is sorted by given name
+                // student record is sorted by given name
 			
               qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
 		break; 
 	case gradesort:
-		// student record is sorted by grades
+		 // student record is sorted by grades
 			
            qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
 		break; 
