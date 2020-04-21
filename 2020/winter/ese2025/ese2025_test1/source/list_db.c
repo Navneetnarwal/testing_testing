@@ -19,11 +19,11 @@
  */
 stuLL_t* createNodeLinkedList(void)
 {
-           // PROBLEM 1:SOLUTION
+          // PROBLEM 1:SOLUTION
 	
-	   //dynamic memory allocation in heap using malloc function for the student record
-stull_t* pHEAD= (stull_t*)malloc(sizeof(stull_t));
-if (pHEAD!= NULL)NEXT=NULL;
+	 //dynamic memory allocation in heap using malloc function for the student record
+  stull_t* pHEAD= (stull_t*)malloc(sizeof(stull_t));
+  if (pHEAD!= NULL)NEXT=NULL;
 {   
           //  new data is assigned to the node 
 	
