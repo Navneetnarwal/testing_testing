@@ -13,7 +13,7 @@
 
 /*****************************************************
  * FUNCTION DECLARATIONS
- *****************************************************/
+ ************************************************/
 
 /*
  * (private) function provides comparison between two array elements for qsort(), based on fName
@@ -32,9 +32,7 @@ int comparo_fName(const void *pA, const void *pB)
    char *fName_B = student_B.data.fName;
 	
           //returning the string strcmp function using data(fName_A and fName_B)
-         return strcmp(fName_A, fName_B);
-	
-	  
+         return strcmp(fName_A, fName_B);	  
 	
 }
 
