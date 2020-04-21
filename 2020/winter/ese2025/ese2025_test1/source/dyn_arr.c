@@ -21,15 +21,18 @@
  */
 int comparo_fName(const void *pA, const void *pB)
 {
-	   // PROBLEM #3: solution
+	   // PROBLEM #3: SOLUTION
+	
 	   // student record is extracted
    stuDA_t student_A = *((stuDA_t*) pA);
    stuDA_t student_B = *((stuDA_t*) pA);
+	
            //getting student family name
    char *fName_A = student_A.data.fName;
    char *fName_B = student_B.data.fName;
+	
           //returning the string strcmp function using data(fName_A and fName_B)
-       return strcmp(fName_A, fName_B);
+         return strcmp(fName_A, fName_B);
 	
 	  
 	
@@ -58,19 +61,21 @@ int comparo_gName(const void *pA, const void *pB)
  */
 int comparo_grade(const void *pA, const void *pB)
 {
-	// PROBLEM #4:solution
+	// PROBLEM #4:SOLUTION
 
 
-	//extracting student record
+	       //extracting student record
         stuDA_t student_A = *((stuDA_t*) pA);
 	stuDA_t student_B = *((stuDA_t*) pB);
-        //getting  the student grade for comparision purpose
+	
+              //getting  the student grade for comparision purpose
      float *garde_A = student_A.data.grade;
      float *garde_B = student_B.data.grade;
-  //  returning the string by Strcmp function using (grade_A and grade_B) data
-return strcmp(grade_A, grade_B);
 	
-}
+             //  returning the string by Strcmp function using (grade_A and grade_B) data
+      return strcmp(grade_A, grade_B);
+	
+    }
 
 /*
  * function forms a dynamically allocated array based on the linked list
@@ -101,22 +106,24 @@ stuDA_t* formDynamicArray(stuLL_t *pHEAD_LL, size_t student_count)
 stuDA_t* sortDynamicArray(stuDA_t *pHEAD, const sort_t sort_type,
 		const size_t array_size)
 {
-	// PROBLEM #5:solution
+	// PROBLEM #5:SOLUTION
 		
 
 	switch (sort_type)
 	{
 	case fNamesort:
                // student record is sorted by family name
+			
 		qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_fName);
 		break;
 	case gNamesort:
                // student record is sorted by given name
+			
               qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_gName);
 		break; 
-		
 	case gradesort:
 		// student record is sorted by grades
+			
            qsort(pHEAD, array_size, sizeof(stuRec_t), comparo_grade);
 		break; 
 		
